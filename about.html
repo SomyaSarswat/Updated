@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Newsprism</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('Rename.png') center/cover no-repeat;
+      color: white;
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 40px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      font-size: 18px;
+      line-height: 1.7;
+      color: #333;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .about-content h3 {
+      color: #00aced;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .about-content {
+        padding: 20px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <h1 class="site-name">Newsprism</h1>
+      <p class="site-tagline">Your daily dose of unbiased news</p>
+    </div>
+    <div class="navbar-center">
+      <input type="text" placeholder="Search..." class="search-input" />
+      <button class="search-btn">Search</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h2>About Newsprism</h2>
+    <p>Delivering truth without bias — because facts matter.</p>
+  </div>
+
+  <div class="about-content">
+    <h3>Our Mission</h3>
+    <p>
+      Newsprism is a trusted platform delivering unbiased, up-to-date news from reliable sources worldwide. 
+      We are committed to keeping readers informed with facts, not opinions — free from political or commercial influence. 
+      Our mission is to provide clear, honest journalism that empowers informed decisions.
+    </p>
+  </div>
+</body>
+</html>

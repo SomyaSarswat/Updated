@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 80px; /* Prevents navbar from covering top content */
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Navbar layout */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 15px 30px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Left: Site name and tagline */
+.navbar-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.site-name {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00aced;
+}
+
+.site-tagline {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 4px;
+}
+
+/* Center: Search bar */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.search-input {
+  padding: 6px 10px ;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-btn {
+  padding: 6px 12px;
+  background-color: #00aced;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #0084b4;
+}
+
+/* Right: Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00aced;
+}
+
+.banner-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 400px; /* Optional: limits height*/
+  object-fit: cover; /* Ensures image fills container nicely */
+}
+
+
+.page-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  font-size: 28px;
+  text-align: center;
+  color: #333;
+  margin: 40px 20px; /* Top/bottom: 40px, sides: 20px */
+  padding-bottom: 10px; /* Optional: subtle spacing before cards */
+  border-bottom: 1px solid #eee; /* Optional: visual separator */
+}
+
+#blog-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.blog-card{
+  width: 280px;
+  border:1px solid #2d4c50;
+  border-radius: 10px;
+  cursor: pointer;
+  padding:1rem;
+  margin: 10px;
+}
+
+.blog-card:hover{
+ box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+}
+
+.blog-card img{
+  width:100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.blog-card h2{
+color: #141414;
+font-size: 1.7rem;
+font-weight: 500;
+}
+
+.blog-card p {
+font-size: 1.2rem;
+padding-top: 0.7rem;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .blog-card {
+    flex: 1 1 calc(50% - 30px);
+  }
+
+  .navbar-center {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-left,
+  .navbar-center,
+  .nav-links {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-center {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .blog-card {
+    flex: 1 1 100%;
+  }
+
+  .page-heading {
+    font-size: 22px;
+  }
+}
+
+
+.blog-card img,
+.banner-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+
+.site-footer {
+  background-color: #111;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 2px solid #00aced;
+}
+
+.footer-content h3 {
+  margin: 0;
+  font-size: 28px;
+  color: #00aced;
+  letter-spacing: 1px;
+}
+
+.footer-content .tagline {
+  font-size: 14px;
+  margin: 8px 0 20px;
+  color: #bbb;
+}
+
+.footer-content .copyright {
+  font-size: 13px;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 30px 15px;
+  }
+
+  .footer-content h3 {
+    font-size: 24px;
+  }
+
+  .footer-content .tagline {
+    font-size: 13px;
+  }
+}

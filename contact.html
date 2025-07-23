@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Newsprism</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('GlobalNetwork.png') center/cover no-repeat;
+      color: white;
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    .contact-container button {
+      padding: 12px;
+      border: none;
+      background-color: #00aced;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-container button:hover {
+      background-color: #0084b4;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .contact-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <h1 class="site-name">Newsprism</h1>
+      <p class="site-tagline">Your daily dose of unbiased news</p>
+    </div>
+    <div class="navbar-center">
+      <input type="text" placeholder="Search..." class="search-input" />
+      <button class="search-btn">Search</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h2>Contact Us</h2>
+    <p>Have feedback, questions, or media inquiries? We’d love to hear from you.</p>
+  </div>
+
+  <div class="contact-container">
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</body>
+</html>
